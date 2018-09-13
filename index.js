@@ -6,6 +6,7 @@ function splitDSV(file, delimiter=',', lines = 100, output=process.env.PWD){
   const inputFile = fs.readFileSync(file,'utf-8');
   const myDsv = dsv.dsvFormat(delimiter);
   const rows = myDsv.parse(inputFile);
+  //console.log(rows);
   const fileExtension = path.extname(file);
   const fileName = path.basename(file, fileExtension);
   let i = 1;

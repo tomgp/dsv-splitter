@@ -18,4 +18,6 @@ if(!commander.file){
   process.exit(0);
 }
 
+console.log(commander.delimiter);
+if(commander.delimiter === '\\t'){ commander.delimiter = "\t" };
 splitDSV(commander.file, commander.delimiter, commander.lines, commander.output);

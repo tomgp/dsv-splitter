@@ -1,15 +1,21 @@
 # dsv-splitter
-Split a delimiter separated values file into a set of smaller files
+Split a delimiter separated values file into a set of smaller files with values separated by the same delimeters
 
 ## command line
 ```
+npm install -g dsv-splitter
+```
+
+```
 Options:
-  -f, --file [value]       a file path
-  -d, --delimiter [value]
-  -l, --lines [value]      an integer
-  -o, --output [value]     output directory
+  -f, --file [value]       a file path (required)
+  -d, --delimiter [value]  (default value ',')
+  -l, --lines [value]      an integer (default value 100)
+  -o, --output [value]     output directory (default value your current working directory)
   -h, --help               output usage information
 ```
+e.g. `dsvSplitter -f test-data/books.csv -o test-output/`
+or `dsvSplitter --file giantSpreadSheet.tsv --delimiter "\t" --lines 1000`
 
 ## require(d)
 ```
