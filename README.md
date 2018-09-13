@@ -5,7 +5,7 @@ The first line of the input file is assumed to be the column headings and is rep
 
 ## command line
 ```
-npm install -g dsv-splitter
+npm i -g @tomgp/dsv-splitter
 ```
 
 ```
@@ -19,9 +19,13 @@ Options:
 e.g. `dsvSplitter -f test-data/books.csv -o test-output/`
 or `dsvSplitter --file giantSpreadSheet.tsv --delimiter "\t" --lines 1000`
 
-## require(d)
+## require it
 ```
-const {splitDSV} = require('../');
+npm i @tomgp/dsv-splitter
+```
+
+```
+const { splitDSV } = require('@tomgp/dsv-splitter');
 
 splitDSV( commander.file, commander.delimiter, commander.lines, commander.output );
 ```
