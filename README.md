@@ -1,5 +1,7 @@
 # dsv-splitter
-Split a delimiter separated values file into a set of smaller files with values separated by the same delimeters
+Split a delimiter separated values file into a set of smaller files with values separated by the same delimeters.
+
+The first line of the input file is assumed to be the column headings and is repeated at the top of each output file. (TODO, provide an options to not have this happen)
 
 ## command line
 ```
