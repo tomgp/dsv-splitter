@@ -1,0 +1,21 @@
+#!/usr/bin/env node
+
+const fs = require('fs');
+const path = require('path');
+const commander = require('commander');
+const dsv = require('d3-dsv');
+const {splitDSV} = require('..');
+
+commander
+  .option('-f, --file [value]', 'a file path')
+  .option('-d, --delimiter [value]')
+  .option('-l, --lines [value]', 'an integer', parseInt)
+  .option('-o, --output [value]', 'output directory')
+  .parse(process.argv);
+
+if(!commander.file){
+  console.error('SORRY: Please provide a file path (dsvSplitter --help)');
+  process.exit(0);
+}
+
+splitDSV(commander.file, commander.delimiter, commander.lines, commander.output);
